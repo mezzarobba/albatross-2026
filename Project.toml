@@ -1,4 +1,5 @@
 [deps]
 AlgebraicSolving = "a8972ca8-39e2-411a-84a1-0268ecf0dcd0"
-IJulia = "7073ff75-c02e-5982-4ecf-1189817036e4"
 Plots = "91a5bc11-78e3-516f-969c-bce932d04686"
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"

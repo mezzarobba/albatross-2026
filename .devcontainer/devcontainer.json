@@ -1,11 +1,6 @@
 {
   "name": "Julia Jupyter ALBATROSS",
   "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
-  "features": {
-    "ghcr.io/devcontainers/features/julia:1": {
-      "version": "1.10"
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,5 +10,5 @@
       ]
     }
   },
-  "postCreateCommand": "julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.build(\"IJulia\")'"
+  "postCreateCommand": "sudo mkdir -p /opt/julia && curl -sL https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz | sudo tar -xz -C /opt/julia --strip-components=1 && sudo ln -sf /opt/julia/bin/julia /usr/local/bin/julia && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.build(\"IJulia\")'"
 }

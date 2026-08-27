@@ -1,7 +1,7 @@
 {
-  "name": "ALBATROSS 2026",
-  "image": "ghcr.io/imperialcollegelondon/rcds-introduction-to-julia-devcontainer:latest",
-  "remoteUser": "vscode",
+    "name": "Julia on Pluto",
+    "image": "ghcr.io/imperialcollegelondon/rcds-introduction-to-julia-devcontainer:latest",
+    "remoteUser": "vscode",
     "containerEnv": {
         "JULIA_DEPOT_PATH": "/usr/local/julia-depot"
     },
@@ -21,6 +21,5 @@
                 "extensions.ignoreRecommendations": true
             }
         }
-    },
-  "postCreateCommand": "sudo mkdir -p /opt/julia && curl -sL https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz | sudo tar -xz -C /opt/julia --strip-components=1 && sudo ln -sf /opt/julia/bin/julia /usr/local/bin/julia && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.build(\"IJulia\")'"
+    }
 }

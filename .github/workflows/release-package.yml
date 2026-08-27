@@ -11,10 +11,6 @@ on:
       - "Project.toml"
       - "Manifest.toml"
 
-  permissions:
-    contents: read
-    packages: write
-  
   release:
     types: [created]
 

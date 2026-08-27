@@ -11,7 +11,7 @@ RUN useradd --create-home --shell /bin/bash --uid 1000 vscode
 
 WORKDIR /home/vscode
 
-COPY start-pluto.sh
+COPY start-pluto.sh ./
 
 WORKDIR /tmp/julia-project
 

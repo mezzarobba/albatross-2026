@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rprebet/albatross-2026/issues"
   },
-  "homepage": "https://github.com/rprebet/albatross-2026#readme"
+  "homepage": "https://github.com/rprebet/albatross-2026#readme",
+  "publishConfig": {
+  "@rprebet:registry": "https://npm.pkg.github.com"
+  }
 }

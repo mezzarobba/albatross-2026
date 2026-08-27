@@ -9,11 +9,15 @@ RUN apt-get update \
 
 RUN useradd --create-home --shell /bin/bash --uid 1000 vscode
 
+WORKDIR /home/vscode
+
+RUN wget https://nextcloud.ens-lyon.fr/public.php/dav/files/gtWXci2Y5kEYL5G
+
 WORKDIR /tmp/julia-project
 
 COPY Project.toml Manifest.toml ./
 
 RUN mkdir -p "${JULIA_DEPOT_PATH}" \
-    && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving, Pluto' \
+    && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving, Pluto, IJulia' \
     && chmod -R a+rwX "${JULIA_DEPOT_PATH}" \
     && rm -rf /tmp/julia-project

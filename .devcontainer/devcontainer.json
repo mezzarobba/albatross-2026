@@ -1,9 +1,17 @@
 {
-    "name": "Julia Jupyter ALBATROSS",
+    "name": "ALBATROSS-2026",
     "image": "ghcr.io/rprebet/albatross-2026:latest",
     "remoteUser": "vscode",
     "containerEnv": {
         "JULIA_DEPOT_PATH": "/usr/local/julia-depot"
+    },
+    "postAttachCommand": "./start-pluto.sh",
+    "forwardPorts": [1234],
+    "portsAttributes": {
+        "1234": {
+            "label": "Pluto",
+            "onAutoForward": "openPreview"
+        }
     },
     "customizations": {
         "vscode": {

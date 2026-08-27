@@ -1,20 +1,17 @@
 {
-    "name": "Julia on Pluto",
-    "image": "ghcr.io/imperialcollegelondon/rcds-introduction-to-julia-devcontainer:latest",
+    "name": "Julia Jupyter ALBATROSS",
+    "image": "ghcr.io/rprebet/albatross-2026:latest",
     "remoteUser": "vscode",
     "containerEnv": {
         "JULIA_DEPOT_PATH": "/usr/local/julia-depot"
     },
-    "postAttachCommand": "./start-pluto.sh",
-    "forwardPorts": [1234],
-    "portsAttributes": {
-        "1234": {
-            "label": "Pluto",
-            "onAutoForward": "openPreview"
-        }
-    },
     "customizations": {
         "vscode": {
+            "extensions": [
+                "julialang.language-julia",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-renderers"
+            ],
             "settings": {
                 "chat.sendElementsToChat.enabled": false,
                 "markdown.preview.security.level": "allow-insecure-local-content",

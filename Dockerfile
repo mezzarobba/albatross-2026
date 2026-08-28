@@ -14,5 +14,5 @@ WORKDIR /tmp/julia-project
 COPY Project.toml Manifest.toml ./
 
 RUN mkdir -p "${JULIA_DEPOT_PATH}" \
-    && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving, Pluto, IJulia'
+    && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving, Pluto, IJulia' \
     && chmod -R a+rwX "${JULIA_DEPOT_PATH}"

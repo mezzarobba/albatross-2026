@@ -31,11 +31,8 @@ WORKDIR /tmp/julia-project
 COPY Project.toml Manifest.toml ./
 
 RUN mkdir -p "${JULIA_DEPOT_PATH}" \
-    && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving, Pluto' \
+    && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving' \
     && chmod -R a+rwX "${JULIA_DEPOT_PATH}"
-
-#USER julia
-#WORKDIR /workspace
 
 # Install IJulia and explicitly tell it which Jupyter to use.
 RUN julia --project=. -e 'ENV["JUPYTER"] = "/opt/jupyter/bin/jupyter"; using Pkg; Pkg.build("IJulia")'

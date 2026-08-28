@@ -20,6 +20,6 @@ COPY Project.toml Manifest.toml ./
 RUN mkdir -p "${JULIA_DEPOT_PATH}" \
     && julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using Plots, AlgebraicSolving, Pluto, IJulia, PackageCompiler; \
     create_sysimage(["Plots", "AlgebraicSolving", "Pluto", "IJulia"], sysimage_path="/usr/local/julia-depot/albatross.so"); \
-    installkernel("Julia ALBATROSS", "--sysimage=/usr/local/julia-depot/albatross.so"); notebook()' \
+    installkernel("Julia ALBATROSS", "--sysimage=/usr/local/julia-depot/albatross.so")' \
     && chmod -R a+rwX "${JULIA_DEPOT_PATH}" \
     && rm -rf /tmp/julia-project

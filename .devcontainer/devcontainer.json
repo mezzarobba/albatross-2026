@@ -5,7 +5,7 @@
     "containerEnv": {
         "JULIA_DEPOT_PATH": "/usr/local/julia-depot"
     },
-    "postAttachCommand": "bash start-pluto.sh",
+    "postAttachCommand": "julia --project=. -e 'using Pluto, AlgebraicSolving, Plots, IJulia' && bash start-pluto.sh",
     "forwardPorts": [1234],
     "portsAttributes": {
         "1234": {

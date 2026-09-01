@@ -64,7 +64,7 @@ Pkg.add("AlgebraicSolving")
 Pkg.add(["Plots", "IJulia"])
 
 using AlgebraicSolving, Plots, IJulia
-notebook()
+notebook(dir=".")
 ```
 
 The manual installation may cause version conflicts if packages are already installed in the global Julia environment.

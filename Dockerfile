@@ -43,5 +43,4 @@ RUN julia --project=. -e 'ENV["JUPYTER"] = "/opt/jupyter/bin/jupyter"; using Pkg
 USER vscode
 WORKDIR /home/vscode
 
-##CMD ["julia", "-e", "using IJulia; notebook()"]
-CMD ["bash", "jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--no-browser", "--allow-root"]

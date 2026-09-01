@@ -9,8 +9,8 @@ The practical session uses [Julia](https://julialang.org/) and [AlgebraicSolving
 * Jupyter notebooks (`*.ipynb`) for the practical session.
 * `solutions/`: solutions for the practical session.
 * `julia_files/`: Julia versions of the notebooks.
-* `install.sh`: installation script for a local Julia installation.
-* `install_docker.sh`: script to start the Docker environment.
+* `run.sh`: run script for a local Julia installation.
+* `run_docker.sh`: script to start the Docker environment.
 
 # Local installation
 
@@ -44,7 +44,7 @@ curl -fsSL https://install.julialang.org | sh
 Run:
 
 ```bash
-./install.sh
+./run.sh
 ```
 
 
@@ -106,10 +106,10 @@ Go to the directory where you want to download the practical-session files. You 
 Then run:
 
 ```bash
-./install_docker.sh
+./run_docker.sh
 ```
 
-By default, Jupyter is exposed on port `8888`. If this port is already in use, change `8888` to another available port in `install_docker.sh`.
+By default, Jupyter is exposed on port `8888`. If this port is already in use, change `8888` to another available port in `run_docker.sh`.
 
 ### 3. Open Jupyter
 

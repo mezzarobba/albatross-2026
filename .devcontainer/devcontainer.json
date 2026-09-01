@@ -7,12 +7,12 @@
     },
     "postAttachCommand": "julia --project=. -e 'using AlgebraicSolving, Plots'",
     "customizations": {
-	"codespaces": {
-    		"openFiles": [
-      			"README.md",
-      			"warmup.ipynb"
-    		]
-  	}
+        "codespaces": {
+            "openFiles": [
+                "README.md",
+                "warmup.ipynb"
+            ]
+        },
         "vscode": {
             "extensions": [
                 "julialang.language-julia",

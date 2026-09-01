@@ -26,7 +26,7 @@ ENV JUPYTER="/opt/jupyter/bin/jupyter"
 # Create user
 RUN useradd --create-home --shell /bin/bash --uid 1000 vscode
 
-USER vscode
+#USER vscode
 
 #WORKDIR /tmp/julia-project
 WORKDIR /home/vscode/julia-project

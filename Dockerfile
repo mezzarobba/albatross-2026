@@ -40,7 +40,7 @@ RUN mkdir -p "${JULIA_DEPOT_PATH}" \
 # Install IJulia and explicitly tell it which Jupyter to use.
 RUN julia --project=. -e 'ENV["JUPYTER"] = "/opt/jupyter/bin/jupyter"; using Pkg; Pkg.add("IJulia"); Pkg.build("IJulia")'
 
-USER vscode
+#USER vscode
 WORKDIR /home/vscode
 
 CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--no-browser", "--allow-root"]
